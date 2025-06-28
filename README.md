@@ -8,5 +8,5 @@ mcs ./src/*.cs -out:./bin/snake.exe
 mono ./bin/snake.exe
 
 ## Dependencies
-mono
-`sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-8.0`
+mono: `sudo apt install mono-devel mono-utils`
+.NET: `sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-8.0`
