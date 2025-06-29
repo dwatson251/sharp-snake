@@ -1,17 +1,22 @@
-class Time
+namespace Snake.Domain.Entity
 {
-    Time()
+    public class Time
     {
-        this.timeSeconds = 0;
-    }
+        private readonly int _timeInSeconds;
 
-    Time(int initialTimeInSeconds)
-    {
-        this.timeSeconds = initialTimeInSeconds;
-    }
+        public Time()
+        {
+            _timeInSeconds = 0;
+        }
 
-    int GetSeconds()
-    {
-        return this.timeSeconds;
+        public Time(int initialTimeInSeconds)
+        {
+            _timeInSeconds = initialTimeInSeconds;
+        }
+
+        public int GetSeconds()
+        {
+            return _timeInSeconds;
+        }
     }
 }

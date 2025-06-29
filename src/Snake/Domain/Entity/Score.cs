@@ -1,17 +1,22 @@
-class Score
+namespace Snake.Domain.Entity
 {
-    Score()
+    public class Score
     {
-        this.score = 0;
-    }
+        private readonly int _score;
 
-    Score(int initialScore)
-    {
-        this.score = initialScore;
-    }
+        public Score()
+        {
+            _score = 0;
+        }
 
-    int GetValue()
-    {
-        return this.score;
+        public Score(int initialScore)
+        {
+            _score = initialScore;
+        }
+
+        int GetValue()
+        {
+            return _score;
+        }
     }
 }

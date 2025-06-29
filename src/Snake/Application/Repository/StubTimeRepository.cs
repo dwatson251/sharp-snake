@@ -1,9 +1,13 @@
-namespace Snake.Application.Repository;
-
-class StubTimeRepository : TimeRepositoryInterface
+namespace Snake.Application.Repository
 {
-    Time GetGameTime()
+    using Snake.Domain.Repository;
+    using Snake.Domain.Entity;
+
+    class StubTimeRepository : ITimeRepository
     {
-        return new Time(120);
+        public Time GetGameTime()
+        {
+            return new Time(120);
+        }
     }
 }

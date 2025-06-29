@@ -1,7 +1,10 @@
-enum Direction
+namespace Snake.Domain.Entity
 {
-    Up,
-    Left,
-    Right,
-    Down,
+    public enum Direction : int
+    {
+        Up = 1,
+        Left = 2,
+        Right = 3,
+        Down = 4,
+    }
 }

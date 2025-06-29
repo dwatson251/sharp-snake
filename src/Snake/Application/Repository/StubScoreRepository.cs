@@ -1,8 +1,13 @@
-namespace Snake.Application.Repository;
-class StubScoreRepository : ScoreRepositoryInterface
+namespace Game.Application.Repository
 {
-    Score GetScore()
+    using Snake.Domain.Repository;
+    using Snake.Domain.Entity;
+    
+    class StubScoreRepository : IScoreRepository
     {
-        return new Score(123);
+        public Score GetScore()
+        {
+            return new Score(123);
+        }
     }
 }

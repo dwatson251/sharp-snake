@@ -2,7 +2,7 @@
 Snake written in C#
 
 ## Build in Mono
-mcs ./src/*.cs -out:./bin/snake.exe
+mcs ./src -recurse:'*.cs' -out:./bin/snake.exe
 
 ## Run in Mono
 mono ./bin/snake.exe

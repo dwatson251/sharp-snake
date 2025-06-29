@@ -1,20 +1,24 @@
-namespace Engine.Domain.Entity;
-
-private class GameObject
+namespace Engine.Domain.Entity
 {
-    GameObject(int x, int y)
+    public class GameObject
     {
-        this.x = x;
-        this.y = y;
-    }
+        private int _x;
+        private int _y;
 
-    int GetX()
-    {
-        return this.x;
-    }
+        public GameObject(int x, int y)
+        {
+            _x = x;
+            _y = y;
+        }
 
-    int GetY()
-    {
-        return this.y;
+        public int GetX()
+        {
+            return _x;
+        }
+
+        public int GetY()
+        {
+            return _y;
+        }
     }
 }

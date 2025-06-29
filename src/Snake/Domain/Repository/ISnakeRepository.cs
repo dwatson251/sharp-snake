@@ -1,8 +1,10 @@
-namespace Snake.Domain.Repository;
-
-interface ISnakeRepository
+namespace Snake.Domain.Repository
 {
-    Snake GetSnake();
-    void SetDirection(Direction direction);
-    void Move();
+    using Snake.Domain.Entity;
+
+    interface ISnakeRepository
+    {
+        Snake GetSnake();
+        void Move();
+    }
 }

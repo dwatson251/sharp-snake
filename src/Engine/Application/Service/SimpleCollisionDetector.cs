@@ -1,10 +1,14 @@
-namespace Engine.Application.Service;
-
-class SimpleCollisionDetector : CollisionDetectorInterface
+namespace Engine.Application.Service
 {
-    bool HasCollided(GameObject target, GameObject intersector)
+    using Engine.Domain.Service;
+    using Engine.Domain.Entity;
+
+    class SimpleCollisionDetector : ICollisionDetector
     {
-        return target.GetX() == intersector.GetX()
-            && target.GetY() == intersector.GetY();
+        public bool HasCollided(GameObject target, GameObject intersector)
+        {
+            return target.GetX() == intersector.GetX()
+                && target.GetY() == intersector.GetY();
+        }
     }
 }

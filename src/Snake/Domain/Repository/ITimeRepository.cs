@@ -1,6 +1,9 @@
-namespace Snake.Domain.Repository;
-
-interface ITimeRepository
+namespace Snake.Domain.Repository
 {
-    Time GetGameTime();
+    using Snake.Domain.Entity;
+    
+    interface ITimeRepository
+    {
+        Time GetGameTime();
+    }
 }

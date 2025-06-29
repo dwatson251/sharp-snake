@@ -1,33 +1,32 @@
-namespace Engine;
-
-class Runner
+namespace Engine
 {
-    private readonly SnakeGameBackendInterface game;
-    private readonly UserInputInterface input;
-    private readonly DisplayOutputInterface output;
-    private readonly int framesPerSecond = 30;
+    using Application.Service;
+    using Domain.Service;
 
-    public Runner(
-       SnakeGameBackendInterface game,
-       UserInputInterface input,
-       DisplayOutputInterface output
-   )
+    class Runner
     {
-        this.game = game;
-        this.input = input;
-        this.output = output;
-    }
+        private readonly IBackend _game;
+        private readonly EventBus _eventBus;
+        private readonly IUserInput _input;
+        private readonly IDisplayOutput _output;
+        private readonly int framesPerSecond = 30;
 
-    public void Run()
-    {
-        while (!_game.IsGameOver)
+        public Runner(
+            EventBus eventBus
+        // IBackend game,
+        // IUserInput input,
+        // IDisplayOutput output
+        )
         {
-            var direction = _input.GetNextDirection();
-            _game.Update(direction);
-            _output.Render(_game.GetState());
-            Thread.Sleep(_frameRate);
+            _eventBus = eventBus;
+            // _game = game;
+            // _input = input;
+            // _output = output;
         }
 
-        Console.WriteLine("Game Over!");
+        public void Run()
+        {
+            
+        }
     }
 }

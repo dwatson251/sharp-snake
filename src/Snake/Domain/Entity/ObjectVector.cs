@@ -1,29 +1,37 @@
-class ObjectVector
+namespace Snake.Domain.Entity
 {
-    void ObjectVector()
+    public class ObjectVector
     {
-        this.x = 0;
-        this.y = 0;
-    }
+        protected int _x;
+        protected int _y;
 
-    void ObjectVector(int x, int y)
-    {
-        this.x = x;
-        this.y = y;
-    }
+        public ObjectVector()
+        {
+            _x = 0;
+            _y = 0;
+        }
 
-    ObjectVector SetVector(int x, int y)
-    {
-        this.setX = x;
-    }
+        public ObjectVector(int x, int y)
+        {
+            _x = x;
+            _y = y;
+        }
 
-    int GetX()
-    {
-        return this.x;
-    }
+        public ObjectVector SetVector(int x, int y)
+        {
+            _x = x;
+            _y = y;
+            return this;
+        }
 
-    int GetY()
-    {
-        return this.y;
+        public int GetX()
+        {
+            return _x;
+        }
+
+        public int GetY()
+        {
+            return _y;
+        }
     }
 }

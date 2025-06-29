@@ -1,6 +1,9 @@
-namespace Engine.Domain.Service;
-
-private interface ICollisionDetector
+namespace Engine.Domain.Service
 {
-    bool HasCollided(GameObject target, GameObject intersector);
+    using Engine.Domain.Entity;
+    
+    interface ICollisionDetector
+    {
+        bool HasCollided(GameObject target, GameObject intersector);
+    }
 }

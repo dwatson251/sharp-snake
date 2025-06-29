@@ -1,6 +1,9 @@
-namespace Snake.Domain.Repository;
-
-interface IScoreRepository
+namespace Snake.Domain.Repository
 {
-    Score GetScore();
+    using Snake.Domain.Entity;
+
+    interface IScoreRepository
+    {
+        Score GetScore();
+    }
 }
